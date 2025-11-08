@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Batcave Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main class="login-page">
+    <section class="login-form">
+        <h2> Secure Login Portal</h2>
+        <p>Please enter your credentials below.</p>
+
+        <form action="cgi-bin/login.py" method="post">
+            <label>Username:</label><br>
+            <input type="text" name="username" required><br><br>
+
+            <label>Password:</label><br>
+            <input type="password" name="password" required><br><br>
+
+            <label><input type="checkbox" name="employee"> Employee Login</label><br><br>
+
+            <input type="submit" value="Login">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Batcave Network. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

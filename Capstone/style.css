@@ -1,0 +1,321 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #000;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #f1c40f;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #f1c40f;
+    color: #000;
+}
+
+nav a:visited {
+    color: #c0c0c0; /* Un color ligeramente diferente para los enlaces visitados */
+}
+
+/* Header with gradient, rounded corners, and box shadow */
+header {
+    background: linear-gradient(to right, #111111, #222222);
+    color: #f1c40f;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 2px solid #f1c40f;
+    border-radius: 0 0 20px 20px; /* Bordes redondeados solo en la parte inferior */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* Main Content Area */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex: 1 1 100%; /* Por defecto, ocupan todo el ancho */
+}
+
+/* Newspaper-style columns */
+.news {
+    column-count: 2;
+    column-gap: 40px;
+    padding: 20px;
+    text-align: justify;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente */
+}
+
+table, th, td {
+    border: 1px solid #f1c40f;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+/* Form Styling */
+.contact-page main {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.contact-form-section {
+    flex: 2;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #f1c40f;
+}
+
+input:invalid, textarea:invalid {
+    border: 2px solid red;
+}
+
+button[type="submit"] {
+    padding: 12px 25px;
+    background-color: #f1c40f;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e0b40e;
+}
+
+/* Aside floating and styling */
+aside {
+    float: right;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #2c2c2c;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+    font-style: italic;
+    color: #f1c40f;
+    border-left: 5px solid #f1c40f;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Image Animation and Styles */
+img.animated {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(255,255,0,0.5);
+    animation: pulseGlow 4s infinite, batMove 4s infinite;
+}
+
+@keyframes batMove {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px 5px rgba(255,255,0,0.5); }
+    50% { box-shadow: 0 0 30px 10px rgba(255,255,0,0.8); }
+}
+
+/* Other Elements */
+.highlight {
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #2c2c2c;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-left: 3px solid #f1c40f;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #888;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .news {
+        column-count: 1;
+    }
+    
+    .contact-page main {
+        flex-direction: column;
+    }
+    
+    aside {
+        float: none;
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+/* ================================
+   Login Result Page Styles
+   ================================ */
+.login-card {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.3);
+    text-align: center;
+    border: 2px solid #f1c40f;
+}
+
+.login-card h1 {
+    color: #f1c40f;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.login-card h3 {
+    color: #ff4d4d;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.login-card p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.login-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #f1c40f;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.login-card a:hover {
+    background-color: #e0b40e;
+    transform: scale(1.05);
+}
+
+.login-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.login-card li {
+    background-color: #2c2c2c;
+    border-left: 4px solid #f1c40f;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
